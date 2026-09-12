@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="theme-color" content="#14213d" />
+<title>Unidad I · Filosofía y educación</title>
+<style>
+:root{--navy:#14213d;--ink:#172033;--muted:#667085;--paper:#f7f4ee;--cream:#fffaf0;--gold:#d39b3d;--wine:#7c3142;--sage:#52796f;--sky:#4d7ea8;--card:#ffffff;--line:#d9d4c7;--good:#2f7d5b;--bad:#a13f4c;--shadow:0 18px 55px rgba(20,33,61,.14)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:linear-gradient(135deg,#ede7dc,#f8f6f0 52%,#e9edf2);color:var(--ink);min-height:100vh}
+button,input,select{font:inherit}button{cursor:pointer}.app{min-height:100vh;display:grid;grid-template-rows:auto 1fr auto}.topbar{display:flex;gap:14px;align-items:center;padding:12px 18px;background:rgba(20,33,61,.96);color:#fff;position:sticky;top:0;z-index:20;backdrop-filter:blur(8px)}.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}.brand-badge{width:34px;height:34px;border:1px solid rgba(255,255,255,.34);border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,.08)}.top-actions{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}.icon-btn,.pill-btn{border:1px solid rgba(255,255,255,.26);background:rgba(255,255,255,.09);color:#fff;border-radius:10px;padding:8px 11px}.icon-btn:hover,.pill-btn:hover{background:rgba(255,255,255,.16)}.progress-wrap{height:4px;background:#263758}.progress{height:100%;background:linear-gradient(90deg,#d39b3d,#f2c66d);width:5%;transition:width .35s ease}
+.stage{display:grid;grid-template-columns:minmax(0,1fr);padding:24px}.slide{display:none;max-width:1180px;width:100%;margin:0 auto;background:var(--card);border:1px solid rgba(20,33,61,.08);border-radius:24px;box-shadow:var(--shadow);overflow:hidden;animation:fade .35s ease}.slide.active{display:block}@keyframes fade{from{opacity:.25;transform:translateY(8px)}to{opacity:1;transform:none}}
+.slide-inner{padding:clamp(22px,4vw,52px)}.kicker{text-transform:uppercase;letter-spacing:.14em;font-weight:800;color:var(--wine);font-size:.78rem}.title{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.2rem,5vw,4.8rem);line-height:1.02;margin:.28em 0;color:var(--navy)}.subtitle{font-size:clamp(1.05rem,2vw,1.35rem);line-height:1.6;color:#4f5665;max-width:820px}.section-title{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.8rem,3.3vw,3.2rem);line-height:1.1;color:var(--navy);margin:.15em 0 .5em}.lead{font-size:1.08rem;line-height:1.72;color:#374151}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}.card.soft{background:#fbfaf7}.card h3{margin:.1em 0 .5em;color:var(--navy)}.callout{padding:18px 20px;border-left:5px solid var(--gold);background:#fff7e6;border-radius:14px}.quote{font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;line-height:1.55;color:#28324a}.tag{display:inline-block;padding:6px 10px;border-radius:999px;background:#edf2f7;color:#334155;font-size:.82rem;font-weight:700;margin:3px}.hero{display:grid;grid-template-columns:1.05fr .95fr;min-height:620px}.hero-copy{padding:clamp(34px,5vw,68px);display:flex;flex-direction:column;justify-content:center}.hero-media{position:relative;min-height:420px;background:#1b263b;overflow:hidden}.hero-media img,.photo-frame img{width:100%;height:100%;object-fit:cover;display:block}.hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,33,61,.15),rgba(20,33,61,.02) 45%,rgba(20,33,61,.2))}.caption{font-size:.78rem;color:#6b7280;margin-top:8px;line-height:1.35}.photo-frame{border-radius:20px;overflow:hidden;min-height:380px;background:#e7e2d8;position:relative}.photo-frame .label{position:absolute;left:12px;bottom:12px;background:rgba(20,33,61,.88);color:#fff;padding:8px 11px;border-radius:10px;font-size:.8rem}.concept-map{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}.map-node{padding:18px;border-radius:18px;border:1px solid var(--line);background:#fff;text-align:center}.arrow{font-size:2rem;color:var(--gold)}
+.branch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.branch{border:1px solid var(--line);padding:16px;border-radius:16px;background:#fff;transition:.2s}.branch:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.07)}.branch strong{display:block;color:var(--wine);margin-bottom:6px}.activity{background:#f7f9fc;border:1px dashed #9fb0c3;border-radius:18px;padding:22px}.options{display:grid;gap:10px;margin-top:14px}.option{display:flex;gap:10px;align-items:flex-start;border:1px solid #d7dee8;border-radius:13px;background:#fff;padding:12px}.option input{margin-top:3px;accent-color:var(--wine)}.btn{border:0;border-radius:12px;padding:11px 15px;background:var(--navy);color:#fff;font-weight:800}.btn.secondary{background:#eef1f5;color:#243148;border:1px solid #ccd5e0}.btn.gold{background:var(--gold);color:#1f2937}.btn:disabled{opacity:.5;cursor:not-allowed}.feedback{margin-top:12px;padding:12px 14px;border-radius:12px;display:none}.feedback.show{display:block}.feedback.good{background:#e8f5ef;color:#1f5e45;border:1px solid #b8dfcf}.feedback.bad{background:#fcecef;color:#7d2f3a;border:1px solid #edc4cb}
+.question-card{border:1px solid var(--line);border-radius:16px;padding:17px;background:#fff}.question-card + .question-card{margin-top:12px}.question-card button{width:100%;text-align:left;border:0;background:transparent;color:var(--navy);font-weight:800;padding:0;display:flex;justify-content:space-between;gap:10px}.answer{display:none;padding-top:12px;color:#4a5565;line-height:1.6}.question-card.open .answer{display:block}.question-card.open .chev{transform:rotate(180deg)}.chev{transition:.2s}
+.triad{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}.triad .card{position:relative;padding-top:42px}.num{position:absolute;left:18px;top:14px;width:25px;height:25px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.8rem}.flow{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap}.flow-step{flex:1 1 180px;border-radius:16px;border:1px solid var(--line);padding:15px;background:#fff}.flow-step strong{color:var(--navy)}
+.problem-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.tab{border:1px solid #cbd5e1;background:#fff;border-radius:999px;padding:8px 12px;font-weight:700;color:#445066}.tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}.tab-panel{display:none;border:1px solid var(--line);border-radius:18px;padding:22px;background:#fff}.tab-panel.active{display:block}.dilemma{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.vote{border:2px solid #d7dde5;background:#fff;border-radius:16px;padding:18px;text-align:left}.vote.selected{border-color:var(--gold);background:#fff9ec}.meter{height:12px;background:#e6e9ef;border-radius:999px;overflow:hidden;margin-top:12px}.meter-fill{height:100%;width:50%;background:linear-gradient(90deg,var(--wine),var(--gold));transition:.35s}
+.dimension-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.dimension{border:1px solid var(--line);background:#fff;border-radius:16px;padding:18px;text-align:left}.dimension.active{outline:3px solid rgba(211,155,61,.35);border-color:var(--gold)}.dimension-details{margin-top:16px;border-left:5px solid var(--sage);background:#edf6f2;border-radius:14px;padding:18px;min-height:106px}
+.timeline{display:grid;gap:10px}.tl-item{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:start}.tl-year{font-weight:900;color:var(--wine)}.tl-body{border-left:3px solid #e4c07c;padding-left:15px;line-height:1.55}.source-list{display:grid;gap:12px}.source{padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:#fff}.source a{color:#315d86;text-decoration:none;font-weight:800}.source a:hover{text-decoration:underline}
+.footerbar{display:flex;align-items:center;gap:10px;padding:12px 18px;background:#fff;border-top:1px solid #ddd7cb;position:sticky;bottom:0;z-index:15}.footerbar .spacer{flex:1}.slide-count{font-weight:800;color:#596273;min-width:80px;text-align:center}.nav-btn{border:1px solid #ccd3dc;background:#fff;border-radius:11px;padding:9px 13px;color:var(--navy);font-weight:800}.nav-btn.primary{background:var(--navy);color:#fff;border-color:var(--navy)}.drawer{position:fixed;inset:0 auto 0 0;width:min(390px,92vw);background:#fff;z-index:30;box-shadow:20px 0 50px rgba(0,0,0,.2);transform:translateX(-105%);transition:.28s;overflow:auto}.drawer.open{transform:translateX(0)}.drawer-head{padding:18px;background:var(--navy);color:#fff;display:flex;align-items:center;gap:8px;position:sticky;top:0}.drawer-list{padding:12px}.drawer-item{width:100%;text-align:left;border:0;background:#fff;border-radius:12px;padding:11px 12px;color:#364152}.drawer-item:hover,.drawer-item.active{background:#f3efe6;color:var(--wine);font-weight:800}.overlay{position:fixed;inset:0;background:rgba(14,22,37,.35);z-index:25;display:none}.overlay.show{display:block}.speaker-notes{display:none;margin-top:22px;background:#f3f4f6;border:1px dashed #aab1bc;border-radius:13px;padding:14px;color:#515a68}.show-notes .speaker-notes{display:block}.dark{--card:#202838;--ink:#edf1f8;--muted:#aeb8c9;--paper:#18202e;--cream:#242d3e;--line:#3d485a;background:linear-gradient(135deg,#0f1520,#18202d 52%,#101823)}.dark .slide,.dark .card,.dark .branch,.dark .question-card,.dark .tab-panel,.dark .flow-step,.dark .source,.dark .option,.dark .vote,.dark .dimension{background:#202838;color:#edf1f8;border-color:#3a4658}.dark .lead,.dark .subtitle,.dark .answer,.dark .caption{color:#bdc6d5}.dark .section-title,.dark .title,.dark .card h3,.dark .question-card button,.dark .flow-step strong{color:#f4f7fb}.dark .activity{background:#1b2433}.dark .btn.secondary,.dark .tab{background:#283346;color:#e7edf5;border-color:#445269}.dark .footerbar{background:#151d29;border-color:#384458}.dark .nav-btn{background:#202838;color:#edf1f8;border-color:#445269}.dark .drawer{background:#182130}.dark .drawer-item{background:#182130;color:#cdd5e1}.dark .drawer-item:hover,.dark .drawer-item.active{background:#283246;color:#f2cc84}.dark .callout{background:#3a3020}.dark .dimension-details{background:#22382f;color:#dfece5}.dark .speaker-notes{background:#1a2230;color:#c9d2e0;border-color:#4b5667}
+@media(max-width:900px){.hero,.grid2{grid-template-columns:1fr}.hero-media{min-height:320px;order:-1}.grid3,.branch-grid,.triad,.dimension-grid{grid-template-columns:1fr 1fr}.concept-map{grid-template-columns:1fr}.arrow{transform:rotate(90deg);text-align:center}.dilemma{grid-template-columns:1fr}}@media(max-width:620px){.stage{padding:10px}.slide{border-radius:16px}.slide-inner{padding:20px}.topbar{padding:9px 10px}.brand span:last-child{display:none}.grid3,.branch-grid,.triad,.dimension-grid{grid-template-columns:1fr}.tl-item{grid-template-columns:1fr}.footerbar{padding:9px 10px}.slide-count{min-width:62px}.nav-btn{padding:9px 10px}.hero-copy{padding:24px}.hero{min-height:auto}.title{font-size:2.35rem}}
+@media print{.topbar,.footerbar,.drawer,.overlay{display:none!important}.stage{padding:0}.slide{display:block!important;box-shadow:none;border:0;border-radius:0;page-break-after:always}.slide-inner{padding:24px}.hero{min-height:auto}.speaker-notes{display:none!important}}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <header>
+    <div class="topbar">
+      <button class="icon-btn" id="menuBtn" aria-label="Abrir índice">☰</button>
+      <div class="brand"><div class="brand-badge">Φ</div><span>Filosofía y educación</span></div>
+      <div class="top-actions">
+        <button class="pill-btn" id="notesBtn" title="Mostrar notas del docente">Notas</button>
+        <button class="pill-btn" id="themeBtn" title="Cambiar tema">◐</button>
+        <button class="pill-btn" id="fsBtn" title="Pantalla completa">⛶</button>
+      </div>
+    </div>
+    <div class="progress-wrap"><div class="progress" id="progress"></div></div>
+  </header>
+
+  <main class="stage" id="stage">
+    <section class="slide active" data-title="Portada">
+      <div class="hero">
+        <div class="hero-copy">
+          <div class="kicker">Unidad I · Filosofía y educación</div>
+          <h1 class="title">Pensar la educación desde sus fundamentos</h1>
+          <p class="subtitle">Una presentación interactiva para analizar qué es la filosofía, cómo fundamenta la educación y por qué el ser humano puede educarse y transformarse.</p>
+          <div style="margin-top:20px"><span class="tag">1.1 Filosofía</span><span class="tag">1.2 Filosofía de la educación</span><span class="tag">1.3 Relación disciplinar</span><span class="tag">1.4 Problemas</span><span class="tag">1.5 Educabilidad</span></div>
+          <div class="callout" style="margin-top:24px"><strong>Pregunta guía:</strong> ¿qué tipo de persona y de sociedad pretendemos formar cuando educamos?</div>
+        </div>
+        <div class="hero-media">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Raphael_School_of_Athens.jpg" alt="La Escuela de Atenas de Rafael" />
+          <div style="position:absolute;z-index:2;left:16px;bottom:16px;background:rgba(15,23,42,.82);color:white;padding:10px 12px;border-radius:10px;font-size:.78rem">Rafael, <em>La Escuela de Atenas</em> (1511) · Dominio público</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Propósitos de aprendizaje"><div class="slide-inner">
+      <div class="kicker">Antes de comenzar</div><h2 class="section-title">¿Qué aprenderemos?</h2>
+      <div class="grid3">
+        <div class="card"><h3>Comprender</h3><p class="lead">El concepto y objeto de la filosofía y sus principales campos de interrogación.</p></div>
+        <div class="card"><h3>Fundamentar</h3><p class="lead">La filosofía de la educación como análisis crítico de fines, contenidos, autoridad y justicia educativa.</p></div>
+        <div class="card"><h3>Relacionar</h3><p class="lead">Filosofía, pedagogía y educación como planos distintos pero complementarios.</p></div>
+        <div class="card"><h3>Problematizar</h3><p class="lead">Los dilemas éticos, epistemológicos, políticos, antropológicos y teleológicos de educar.</p></div>
+        <div class="card"><h3>Analizar</h3><p class="lead">Al ser humano como sujeto educable, activo, histórico, social y capaz de aprendizaje permanente.</p></div>
+        <div class="card"><h3>Aplicar</h3><p class="lead">Los conceptos mediante casos, dilemas, clasificación y evaluación interactiva.</p></div>
+      </div>
+      <div class="speaker-notes"><strong>Nota docente:</strong> use esta pantalla para anticipar el recorrido conceptual. Puede pedir al grupo que elija cuál de los cinco temas considera más relevante para su futura práctica profesional.</div>
+    </div></section>
+
+    <section class="slide" data-title="1.1 Concepto de filosofía"><div class="slide-inner">
+      <div class="kicker">1.1 Concepto y objeto de la filosofía</div><h2 class="section-title">Filosofar es examinar críticamente los fundamentos</h2>
+      <div class="grid2">
+        <div>
+          <p class="lead">La filosofía puede entenderse como una actividad <strong>racional, crítica, reflexiva y sistemática</strong> que investiga problemas fundamentales acerca de la realidad, el conocimiento, la acción humana, los valores y la vida en sociedad.</p>
+          <div class="callout"><strong>No es solo historia de autores.</strong> Filosofar también implica analizar conceptos, formular preguntas, evaluar argumentos y justificar racionalmente una posición.</div>
+          <div style="margin-top:18px" class="activity">
+            <strong>Activa tu pensamiento</strong>
+            <p>¿Cuál de estas preguntas es filosófica por su carácter fundamental?</p>
+            <div class="options" data-single="philo1">
+              <label class="option"><input type="radio" name="philo1" value="a"> ¿Cuántos estudiantes asistieron hoy?</label>
+              <label class="option"><input type="radio" name="philo1" value="b"> ¿Qué significa que una educación sea justa?</label>
+              <label class="option"><input type="radio" name="philo1" value="c"> ¿Cuánto dura una clase?</label>
+            </div>
+            <button class="btn" data-check="philo1" data-answer="b" style="margin-top:12px">Comprobar</button>
+            <div class="feedback" id="fb-philo1"></div>
+          </div>
+        </div>
+        <div>
+          <div class="photo-frame"><img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Bust_of_Socrates.JPG" alt="Busto de Sócrates"><div class="label">Busto romano de Sócrates · dominio público</div></div>
+          <p class="caption">La tradición socrática ilustra una práctica central de la filosofía: interrogar, definir términos y examinar las razones que sostienen nuestras creencias.</p>
+        </div>
+      </div>
+    </div></section>
+
+    <section class="slide" data-title="Objeto y campos de la filosofía"><div class="slide-inner">
+      <div class="kicker">1.1 Concepto y objeto</div><h2 class="section-title">La filosofía no tiene un único objeto material</h2>
+      <p class="lead">Puede reflexionar sobre múltiples aspectos de la realidad, pero lo hace preguntando por <strong>principios, significados, criterios y justificaciones</strong>.</p>
+      <div class="branch-grid">
+        <div class="branch"><strong>Ontología / Metafísica</strong>¿Qué existe? ¿Qué concepción del ser humano presupone educar?</div>
+        <div class="branch"><strong>Epistemología</strong>¿Qué podemos conocer? ¿Qué cuenta como saber?</div>
+        <div class="branch"><strong>Lógica</strong>¿Cuándo un razonamiento es válido y una conclusión está justificada?</div>
+        <div class="branch"><strong>Ética</strong>¿Qué debemos hacer? ¿Qué valores puede promover legítimamente la educación?</div>
+        <div class="branch"><strong>Filosofía política</strong>¿Qué instituciones y distribuciones educativas son justas?</div>
+        <div class="branch"><strong>Antropología filosófica</strong>¿Qué significa ser humano y por qué somos educables?</div>
+      </div>
+      <div class="speaker-notes"><strong>Sugerencia:</strong> pida a los estudiantes formular una pregunta educativa para cada rama. La finalidad es observar que una misma práctica escolar admite diferentes niveles de análisis.</div>
+    </div></section>
+
+    <section class="slide" data-title="Actividad: clasifica la pregunta"><div class="slide-inner">
+      <div class="kicker">Actividad interactiva</div><h2 class="section-title">¿Qué rama filosófica está en juego?</h2>
+      <div class="activity">
+        <p class="lead"><strong>Pregunta:</strong> “¿Qué conocimientos deberían formar parte obligatoria del currículo y con qué criterio podemos justificar esa selección?”</p>
+        <div class="options" data-single="branchq">
+          <label class="option"><input type="radio" name="branchq" value="a"> Epistemología</label>
+          <label class="option"><input type="radio" name="branchq" value="b"> Estética</label>
+          <label class="option"><input type="radio" name="branchq" value="c"> Ontología exclusivamente</label>
+        </div>
+        <button class="btn" data-check="branchq" data-answer="a" style="margin-top:12px">Comprobar</button>
+        <div class="feedback" id="fb-branchq"></div>
+      </div>
+      <div class="callout" style="margin-top:22px">Una pregunta educativa puede involucrar varias ramas a la vez. Por ejemplo, seleccionar contenidos también puede implicar decisiones éticas y políticas.</div>
+    </div></section>
+
+    <section class="slide" data-title="1.2 Filosofía de la educación"><div class="slide-inner">
+      <div class="kicker">1.2 Filosofía de la educación</div><h2 class="section-title">Examinar qué educación merece ser promovida</h2>
+      <p class="lead">La filosofía de la educación analiza críticamente la <strong>naturaleza, fundamentos, fines, valores y problemas de la educación</strong>. No se limita a describir lo que ocurre: también pregunta qué debería ocurrir y por qué.</p>
+      <div class="grid3" style="margin-top:20px">
+        <div class="card"><h3>Función conceptual</h3><p>Clarifica términos como educación, formación, autoridad, autonomía, igualdad o mérito.</p></div>
+        <div class="card"><h3>Función crítica</h3><p>Cuestiona supuestos y prácticas consideradas normales o inevitables.</p></div>
+        <div class="card"><h3>Función normativa</h3><p>Delibera sobre cómo debería organizarse y orientarse una educación justificable.</p></div>
+      </div>
+      <div class="callout" style="margin-top:20px"><strong>Clave:</strong> que una práctica sea eficaz no basta para demostrar que sea éticamente correcta o educativamente valiosa.</div>
+    </div></section>
+
+    <section class="slide" data-title="Cinco preguntas básicas"><div class="slide-inner">
+      <div class="kicker">Stanford Encyclopedia of Philosophy</div><h2 class="section-title">Cinco preguntas estructuran el campo</h2>
+      <p class="lead">La filosofía de la educación contemporánea puede organizarse alrededor de cinco interrogantes normativos básicos.</p>
+      <div class="grid3">
+        <div class="card"><h3>1. Fines</h3><p>¿Qué propósitos debe perseguir la educación?</p></div>
+        <div class="card"><h3>2. Contenido</h3><p>¿Qué conocimientos, capacidades y valores deben enseñarse?</p></div>
+        <div class="card"><h3>3. Modo</h3><p>¿Cómo debe realizarse la educación y con qué límites?</p></div>
+        <div class="card"><h3>4. Autoridad</h3><p>¿Quién puede decidir legítimamente sobre la educación?</p></div>
+        <div class="card"><h3>5. Responsabilidad</h3><p>¿Qué obligaciones tienen Estado, familias, instituciones y profesionales?</p></div>
+      </div>
+      <div class="activity" style="margin-top:20px">
+        <strong>Pregunta de aplicación:</strong> si una escuela decide prohibir el uso de IA generativa en todas las asignaturas, ¿cuáles de las cinco preguntas habría que discutir? <button class="btn secondary" id="revealFive">Revelar análisis</button>
+        <div id="fiveAnswer" class="feedback good">Aparecen al menos el <strong>contenido</strong> y el <strong>modo</strong> de aprender, la <strong>autoridad</strong> para regular prácticas, los <strong>fines</strong> formativos y la <strong>responsabilidad</strong> de formar un uso crítico y ético de la tecnología.</div>
+      </div>
+    </div></section>
+
+    <section class="slide" data-title="John Dewey y experiencia"><div class="slide-inner">
+      <div class="kicker">Un referente de la filosofía educativa</div><h2 class="section-title">John Dewey: educación, experiencia y democracia</h2>
+      <div class="grid2">
+        <div><div class="photo-frame"><img src="https://upload.wikimedia.org/wikipedia/commons/5/50/John_Dewey%2C_studio_portrait%2C_ca_1890.jpg" alt="Retrato de John Dewey"><div class="label">John Dewey, c. 1890 · dominio público</div></div></div>
+        <div>
+          <p class="lead">Dewey (1859–1952) fue uno de los pensadores más influyentes en educación. Vinculó aprendizaje con <strong>experiencia, investigación, participación y vida democrática</strong>.</p>
+          <div class="callout"><strong>Precisión importante:</strong> no toda experiencia educa. Una experiencia puede ampliar posibilidades futuras de aprendizaje o, por el contrario, limitarlas. La reflexión pedagógica debe valorar su calidad y continuidad.</div>
+          <p class="lead">Su trabajo ayuda a comprender por qué la filosofía educativa no es puramente abstracta: las ideas sobre conocimiento, democracia y persona se traducen en decisiones sobre aula, currículo y participación.</p>
+        </div>
+      </div>
+    </div></section>
+
+    <section class="slide" data-title="1.3 Filosofía, pedagogía y educación"><div class="slide-inner">
+      <div class="kicker">1.3 Relación disciplinar</div><h2 class="section-title">Tres planos distintos de un mismo fenómeno</h2>
+      <div class="triad">
+        <div class="card"><span class="num">1</span><h3>Filosofía de la educación</h3><p><strong>Fundamenta y problematiza.</strong></p><p>Pregunta por fines, valores, justicia, conocimiento y concepción del ser humano.</p></div>
+        <div class="card"><span class="num">2</span><h3>Pedagogía</h3><p><strong>Organiza y orienta.</strong></p><p>Estudia y diseña procesos de enseñanza, formación, currículo y evaluación.</p></div>
+        <div class="card"><span class="num">3</span><h3>Educación</h3><p><strong>Se realiza como proceso.</strong></p><p>Es la formación concreta mediante la cual se desarrollan capacidades, conocimientos, actitudes y formas de participación.</p></div>
+      </div>
+      <div class="concept-map" style="margin-top:24px">
+        <div class="map-node"><strong>¿Por qué y para qué educar?</strong><br>Fundamentación filosófica</div><div class="arrow">→</div><div class="map-node"><strong>¿Cómo organizar la formación?</strong><br>Trabajo pedagógico</div>
+      </div>
+      <div class="concept-map" style="margin-top:12px"><div class="map-node"><strong>¿Qué sucede en la práctica?</strong><br>Proceso educativo real</div><div class="arrow">↔</div><div class="map-node"><strong>Evaluación crítica</strong><br>La práctica retroalimenta la teoría</div></div>
+    </div></section>
+
+    <section class="slide" data-title="Caso: ética profesional"><div class="slide-inner">
+      <div class="kicker">Caso aplicado</div><h2 class="section-title">Una universidad incorpora ética profesional</h2>
+      <div class="grid2">
+        <div class="card soft"><h3>Situación</h3><p class="lead">La universidad decide que todos los programas tendrán una asignatura obligatoria de ética profesional y ciudadanía.</p></div>
+        <div class="activity"><strong>Selecciona la pregunta filosófica</strong>
+          <div class="options" data-single="triadq">
+            <label class="option"><input type="radio" name="triadq" value="a"> ¿Qué número de sesiones tendrá el curso?</label>
+            <label class="option"><input type="radio" name="triadq" value="b"> ¿Por qué debería una universidad asumir responsabilidad por la formación ética?</label>
+            <label class="option"><input type="radio" name="triadq" value="c"> ¿Qué plataforma se usará para subir tareas?</label>
+          </div>
+          <button class="btn" data-check="triadq" data-answer="b" style="margin-top:12px">Comprobar</button><div class="feedback" id="fb-triadq"></div>
+        </div>
+      </div>
+      <div class="flow" style="margin-top:20px">
+        <div class="flow-step"><strong>Filosofía:</strong><br>justifica el valor y finalidad de la formación ética.</div>
+        <div class="flow-step"><strong>Pedagogía:</strong><br>decide estrategias, secuencia, evaluación y experiencias formativas.</div>
+        <div class="flow-step"><strong>Educación:</strong><br>ocurre cuando los estudiantes participan, deliberan y construyen criterios.</div>
+      </div>
+    </div></section>
+
+    <section class="slide" data-title="1.4 Problemas fundamentales"><div class="slide-inner">
+      <div class="kicker">1.4 Problemas fundamentales</div><h2 class="section-title">Educar obliga a tomar decisiones normativas</h2>
+      <div class="problem-tabs" id="problemTabs">
+        <button class="tab active" data-tab="teleo">Teleológico</button><button class="tab" data-tab="antro">Antropológico</button><button class="tab" data-tab="epi">Epistemológico</button><button class="tab" data-tab="etico">Ético</button><button class="tab" data-tab="justicia">Justicia</button><button class="tab" data-tab="politico">Político</button>
+      </div>
+      <div class="tab-panel active" id="teleo"><h3>¿Para qué educar?</h3><p class="lead">La educación puede orientarse al desarrollo intelectual, la autonomía, la ciudadanía, la formación moral, la preparación profesional, la transmisión cultural o la transformación social. Priorizar fines exige justificar por qué unos deben prevalecer o combinarse con otros.</p></div>
+      <div class="tab-panel" id="antro"><h3>¿Qué idea de ser humano guía la educación?</h3><p class="lead">El estudiante puede concebirse como receptor, ciudadano, sujeto moral, trabajador futuro o agente autónomo. Cada concepción modifica la relación educativa y el tipo de participación que se considera valiosa.</p></div>
+      <div class="tab-panel" id="epi"><h3>¿Qué conocimiento merece enseñarse?</h3><p class="lead">El currículo siempre selecciona. El problema es con qué criterios distinguimos conocimiento relevante, información, opinión y capacidades necesarias para comprender el mundo.</p></div>
+      <div class="tab-panel" id="etico"><h3>¿Qué valores puede promover la educación?</h3><p class="lead">La educación nunca es completamente neutral. Debe distinguir entre formación moral razonada y adoctrinamiento, preservando la dignidad y la autonomía del estudiante.</p></div>
+      <div class="tab-panel" id="justicia"><h3>¿Qué significa una educación justa?</h3><p class="lead">Igualdad no equivale siempre a ofrecer exactamente lo mismo. La justicia educativa requiere examinar oportunidades, barreras, apoyos, derechos, necesidades y distribución de recursos.</p></div>
+      <div class="tab-panel" id="politico"><h3>¿Quién decide la educación?</h3><p class="lead">Estado, familias, comunidades, instituciones, docentes y estudiantes pueden reclamar autoridad. La cuestión es cómo distribuirla legítimamente y con qué responsabilidades.</p></div>
+    </div></section>
+
+    <section class="slide" data-title="Dilema: igualdad o equidad"><div class="slide-inner">
+      <div class="kicker">Dilema filosófico</div><h2 class="section-title">¿Tratar igual o responder a necesidades diferentes?</h2>
+      <p class="lead">Una institución dispone de un fondo limitado para apoyos académicos. Puede repartir exactamente la misma cantidad a todos o asignar más apoyo a estudiantes que enfrentan mayores barreras.</p>
+      <div class="dilemma" id="dilemmaVotes">
+        <button class="vote" data-vote="equal"><strong>Opción A · Igualdad uniforme</strong><br><span>Todos reciben exactamente el mismo recurso.</span></button>
+        <button class="vote" data-vote="equity"><strong>Opción B · Equidad</strong><br><span>Los recursos se ajustan a barreras y necesidades justificadas.</span></button>
+      </div>
+      <div class="meter"><div class="meter-fill" id="meterFill"></div></div>
+      <div id="dilemmaText" class="callout" style="margin-top:16px">Selecciona una opción. La meta no es hallar una respuesta automática, sino justificar qué principio de justicia debería orientar la decisión.</div>
+    </div></section>
+
+    <section class="slide" data-title="Autoridad, libertad y límites"><div class="slide-inner">
+      <div class="kicker">Problema ético-político</div><h2 class="section-title">La autoridad educativa necesita justificación</h2>
+      <div class="grid2">
+        <div class="card"><h3>La institución puede…</h3><p>establecer reglas, secuencias, criterios de evaluación y condiciones de convivencia.</p></div>
+        <div class="card"><h3>El estudiante conserva…</h3><p>dignidad, derechos, voz, capacidad de razonamiento y progresiva autonomía.</p></div>
+      </div>
+      <div class="callout" style="margin-top:20px"><strong>Tensión central:</strong> una medida puede ser legal o eficaz y, aun así, requerir examen ético sobre proporcionalidad, respeto, libertad y fines educativos.</div>
+      <div class="question-card" style="margin-top:20px"><button type="button">¿Cuándo una disciplina deja de ser educativa?<span class="chev">⌄</span></button><div class="answer">Cuando pierde una finalidad formativa justificable y se convierte principalmente en humillación, arbitrariedad, exclusión o control desproporcionado. La filosofía obliga a preguntar por límites y razones.</div></div>
+      <div class="question-card"><button type="button">¿Puede el estudiante participar en las reglas?<span class="chev">⌄</span></button><div class="answer">Sí. La participación puede ser compatible con la autoridad institucional y fortalecer comprensión, legitimidad y responsabilidad; el grado depende del contexto, edad y naturaleza de la decisión.</div></div>
+    </div></section>
+
+    <section class="slide" data-title="1.5 El ser humano como sujeto educable"><div class="slide-inner">
+      <div class="kicker">1.5 El ser humano como sujeto educable</div><h2 class="section-title">Educabilidad: posibilidad de aprender y transformarse</h2>
+      <div class="grid2">
+        <div>
+          <p class="lead">La <strong>educabilidad</strong> puede entenderse como la capacidad humana de aprender, desarrollarse y construir nuevas formas de comprender y actuar mediante experiencia, cultura, interacción y educación.</p>
+          <div class="callout"><strong>Dos extremos que conviene evitar:</strong><br>1) determinismo: “la persona es así y no puede cambiar”;<br>2) omnipotencia educativa: “la educación puede producir cualquier resultado sin límites”.</div>
+          <p class="lead">El ser humano posee posibilidades y límites biológicos, psicológicos, sociales, culturales e históricos. La educación opera dentro de esas condiciones.</p>
+        </div>
+        <div><div class="photo-frame"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Students_in_a_classroom.jpg" alt="Estudiantes en un aula"><div class="label">Estudiantes en un aula · imagen de dominio público</div></div><p class="caption">La educabilidad se realiza en contextos concretos: instituciones, culturas, relaciones, oportunidades y recursos influyen en lo que cada persona puede aprender.</p></div>
+      </div>
+    </div></section>
+
+    <section class="slide" data-title="Sujeto, no objeto"><div class="slide-inner">
+      <div class="kicker">Agencia del aprendiz</div><h2 class="section-title">El estudiante participa en su propia formación</h2>
+      <p class="lead">Un sujeto educativo no es alguien sobre quien simplemente “se actúa”. Interpreta, pregunta, decide, se relaciona, establece metas y puede transformar su manera de aprender.</p>
+      <div class="grid3">
+        <div class="card"><h3>Voluntad</h3><p>Disposición para comprometerse y sostener el aprendizaje.</p></div>
+        <div class="card"><h3>Capacidades</h3><p>Conocimientos y habilidades para aprender, autorregularse y aplicar lo aprendido.</p></div>
+        <div class="card"><h3>Medios</h3><p>Oportunidades, recursos y condiciones que hacen posible continuar aprendiendo.</p></div>
+      </div>
+      <div class="callout" style="margin-top:20px">La OECD destaca estos tres componentes al analizar la agencia del aprendiz permanente: no basta con ofrecer oportunidades si la persona no puede movilizar voluntad, capacidades y medios para aprovecharlas.</div>
+    </div></section>
+
+    <section class="slide" data-title="Dimensiones de la educabilidad"><div class="slide-inner">
+      <div class="kicker">Explorador conceptual</div><h2 class="section-title">La educabilidad es multidimensional</h2>
+      <p class="lead">Selecciona una dimensión para explorarla.</p>
+      <div class="dimension-grid" id="dimensions">
+        <button class="dimension active" data-dim="biologica"><strong>Biológica</strong><br>capacidades y límites del organismo</button>
+        <button class="dimension" data-dim="racional"><strong>Racional</strong><br>comprensión, argumento y revisión de creencias</button>
+        <button class="dimension" data-dim="social"><strong>Social</strong><br>aprendizaje mediado por otros</button>
+        <button class="dimension" data-dim="cultural"><strong>Cultural</strong><br>lenguajes, valores y tradiciones</button>
+        <button class="dimension" data-dim="etica"><strong>Ética</strong><br>responsabilidad y deliberación</button>
+        <button class="dimension" data-dim="historica"><strong>Histórica</strong><br>oportunidades y condiciones concretas</button>
+      </div>
+      <div class="dimension-details" id="dimensionDetails"><strong>Dimensión biológica:</strong> aprender requiere un organismo capaz de cambiar con la experiencia. La plasticidad y el desarrollo posibilitan aprendizajes, pero no eliminan límites ni diferencias individuales.</div>
+    </div></section>
+
+    <section class="slide" data-title="Aprendizaje a lo largo de la vida"><div class="slide-inner">
+      <div class="kicker">Educabilidad permanente</div><h2 class="section-title">Aprender no termina al salir de la escuela</h2>
+      <p class="lead">UNESCO sostiene una visión del aprendizaje como proceso que abarca toda la vida y distintos contextos. La OECD también analiza la necesidad de aprender, desaprender y reaprender ante transformaciones tecnológicas y sociales.</p>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-year">Infancia</div><div class="tl-body">Desarrollo del lenguaje, vínculos, hábitos y bases para aprendizajes posteriores.</div></div>
+        <div class="tl-item"><div class="tl-year">Adolescencia</div><div class="tl-body">Construcción de identidad, autonomía, pertenencia, pensamiento crítico y proyectos de vida.</div></div>
+        <div class="tl-item"><div class="tl-year">Adultez</div><div class="tl-body">Actualización profesional, participación social, nuevas responsabilidades y cambios de contexto.</div></div>
+        <div class="tl-item"><div class="tl-year">Vejez</div><div class="tl-body">Continuidad del aprendizaje, participación cultural, adaptación y transmisión intergeneracional.</div></div>
+      </div>
+    </div></section>
+
+    <section class="slide" data-title="Caso integrador"><div class="slide-inner">
+      <div class="kicker">Caso para retroalimentar la unidad</div><h2 class="section-title">“Una escuela que quiere formar ciudadanos críticos”</h2>
+      <div class="card soft"><p class="lead">Una preparatoria modifica su proyecto educativo. Además del rendimiento académico, quiere fortalecer pensamiento crítico, convivencia democrática y responsabilidad social. Propone debates, proyectos comunitarios y mayor participación estudiantil en algunas decisiones. Un grupo de docentes apoya la iniciativa; otro considera que la escuela debería concentrarse solo en contenidos disciplinares.</p></div>
+      <div class="question-card" style="margin-top:16px"><button type="button">¿Cuál es el problema teleológico?<span class="chev">⌄</span></button><div class="answer">Definir para qué debe educar la institución: solo dominio disciplinar, formación ciudadana, desarrollo integral o una combinación justificada.</div></div>
+      <div class="question-card"><button type="button">¿Cuál es el problema antropológico?<span class="chev">⌄</span></button><div class="answer">Decidir si el estudiante se concibe principalmente como receptor de contenidos o como sujeto capaz de deliberar, participar y asumir responsabilidades.</div></div>
+      <div class="question-card"><button type="button">¿Cuál es el problema político?<span class="chev">⌄</span></button><div class="answer">Determinar cómo se distribuye la autoridad para tomar decisiones educativas entre docentes, directivos, estudiantes, familias y comunidad.</div></div>
+      <div class="question-card"><button type="button">¿Qué pregunta pedagógica sigue?<span class="chev">⌄</span></button><div class="answer">Una vez justificados los fines, la pedagogía debe diseñar experiencias, estrategias y evaluaciones coherentes con ellos.</div></div>
+    </div></section>
+
+    <section class="slide" data-title="Evaluación interactiva"><div class="slide-inner">
+      <div class="kicker">Evaluación formativa</div><h2 class="section-title">Comprueba tu comprensión</h2>
+      <form id="quiz" class="activity">
+        <div class="question-card"><strong>1. ¿Qué caracteriza mejor a la filosofía de la educación?</strong><div class="options"><label class="option"><input type="radio" name="q1" value="a"> Solo recopila técnicas didácticas.</label><label class="option"><input type="radio" name="q1" value="b"> Analiza fundamentos, fines, valores y problemas normativos de la educación.</label><label class="option"><input type="radio" name="q1" value="c"> Se limita a describir estadísticas escolares.</label></div></div>
+        <div class="question-card"><strong>2. La pregunta “¿qué conocimiento merece ser enseñado?” es principalmente…</strong><div class="options"><label class="option"><input type="radio" name="q2" value="a"> epistemológica.</label><label class="option"><input type="radio" name="q2" value="b"> exclusivamente estética.</label><label class="option"><input type="radio" name="q2" value="c"> administrativa.</label></div></div>
+        <div class="question-card"><strong>3. La pedagogía y la filosofía de la educación…</strong><div class="options"><label class="option"><input type="radio" name="q3" value="a"> son exactamente lo mismo.</label><label class="option"><input type="radio" name="q3" value="b"> se excluyen entre sí.</label><label class="option"><input type="radio" name="q3" value="c"> se relacionan: una fundamenta y problematiza, la otra organiza procesos formativos.</label></div></div>
+        <div class="question-card"><strong>4. Educabilidad significa que…</strong><div class="options"><label class="option"><input type="radio" name="q4" value="a"> el ser humano puede aprender y transformarse, dentro de condiciones y límites.</label><label class="option"><input type="radio" name="q4" value="b"> cualquier persona puede convertirse en cualquier cosa sin límites.</label><label class="option"><input type="radio" name="q4" value="c"> la educación solo ocurre durante la escolarización obligatoria.</label></div></div>
+        <div class="question-card"><strong>5. Un problema de justicia educativa aparece cuando preguntamos…</strong><div class="options"><label class="option"><input type="radio" name="q5" value="a"> qué tipografía usar en un cartel.</label><label class="option"><input type="radio" name="q5" value="b"> cómo distribuir apoyos y oportunidades frente a desigualdades relevantes.</label><label class="option"><input type="radio" name="q5" value="c"> cuántas páginas tiene un libro.</label></div></div>
+        <button class="btn gold" type="submit" style="margin-top:16px">Calificar</button>
+        <button class="btn secondary" type="button" id="resetQuiz" style="margin-top:16px">Reiniciar</button>
+        <div class="feedback" id="quizResult" aria-live="polite"></div>
+      </form>
+    </div></section>
+
+    <section class="slide" data-title="Síntesis de la unidad"><div class="slide-inner">
+      <div class="kicker">Síntesis</div><h2 class="section-title">Del fundamento a la práctica educativa</h2>
+      <div class="flow">
+        <div class="flow-step"><strong>Filosofía</strong><br>examina realidad, conocimiento, valores y ser humano.</div>
+        <div class="flow-step"><strong>Filosofía de la educación</strong><br>pregunta qué educación es justificable y para qué.</div>
+        <div class="flow-step"><strong>Pedagogía</strong><br>organiza procesos de formación coherentes con esos fines.</div>
+        <div class="flow-step"><strong>Educación</strong><br>se concreta en prácticas, relaciones e instituciones.</div>
+        <div class="flow-step"><strong>Sujeto educable</strong><br>aprende, participa y puede transformarse a lo largo de la vida.</div>
+      </div>
+      <div class="quote" style="margin-top:30px">“Toda práctica educativa presupone una idea de persona, conocimiento, valor y sociedad; hacer explícitos esos supuestos permite discutirlos y justificarlos.”</div>
+      <div class="speaker-notes"><strong>Cierre sugerido:</strong> solicite una respuesta breve a la pregunta guía inicial y compare cómo cambió después de la unidad.</div>
+    </div></section>
+
+    <section class="slide" data-title="Fuentes y créditos"><div class="slide-inner">
+      <div class="kicker">Fuentes confiables y créditos</div><h2 class="section-title">Base académica de la presentación</h2>
+      <div class="source-list">
+        <div class="source"><strong>Stanford Encyclopedia of Philosophy</strong><br><a href="https://plato.stanford.edu/entries/education-philosophy/" target="_blank" rel="noopener">Philosophy of Education</a> · estructura de problemas, fines, contenido, autoridad y responsabilidades.</div>
+        <div class="source"><strong>UNESCO</strong><br><a href="https://www.unesco.org/es/right-education" target="_blank" rel="noopener">El derecho a la educación</a> · educación como derecho humano y oportunidades de aprendizaje a lo largo de la vida.</div>
+        <div class="source"><strong>UNESCO Institute for Lifelong Learning</strong><br><a href="https://lifelonglearning-toolkit.uil.unesco.org/en/node/177" target="_blank" rel="noopener">Defining lifelong learning</a> · aprendizaje a lo largo y ancho de la vida.</div>
+        <div class="source"><strong>OECD</strong><br><a href="https://www.oecd.org/en/publications/education-policy-outlook-2025_c3f402ba-en.html" target="_blank" rel="noopener">Education Policy Outlook 2025</a> · agencia del aprendiz permanente y aprendizaje en diferentes etapas vitales.</div>
+      </div>
+      <h3 style="margin-top:24px;color:var(--navy)">Imágenes reales utilizadas</h3>
+      <div class="source-list">
+        <div class="source"><strong>Rafael, La Escuela de Atenas</strong> · Wikimedia Commons · reproducción de obra en dominio público.</div>
+        <div class="source"><strong>Busto de Sócrates</strong> · fotografía de Luciusmichael · Wikimedia Commons · liberada al dominio público.</div>
+        <div class="source"><strong>John Dewey, c. 1890</strong> · J. Jefferson Gibson / Bentley Historical Library · Wikimedia Commons · dominio público.</div>
+        <div class="source"><strong>Students in a classroom</strong> · Ente75 · Wikimedia Commons · liberada al dominio público. Se incluye únicamente con fines educativos y respetando advertencias sobre derechos de personalidad.</div>
+      </div>
+    </div></section>
+  </main>
+
+  <footer class="footerbar">
+    <button class="nav-btn" id="prevBtn">← Anterior</button><div class="slide-count" id="slideCount">1 / 20</div><button class="nav-btn primary" id="nextBtn">Siguiente →</button><div class="spacer"></div><span style="font-size:.78rem;color:#7a8392">← → navegar · M índice · N notas</span>
+  </footer>
+</div>
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Índice de la presentación"><div class="drawer-head"><strong>Índice</strong><button class="icon-btn" id="closeDrawer" style="margin-left:auto">✕</button></div><div class="drawer-list" id="drawerList"></div></aside>
+<script>
+(() => {
+  const app=document.getElementById('app');
+  const slides=[...document.querySelectorAll('.slide')]; let current=0;
+  const progress=document.getElementById('progress'), count=document.getElementById('slideCount');
+  const drawer=document.getElementById('drawer'), overlay=document.getElementById('overlay'), list=document.getElementById('drawerList');
+  function renderList(){list.innerHTML='';slides.forEach((s,i)=>{const b=document.createElement('button');b.className='drawer-item'+(i===current?' active':'');b.textContent=(i+1)+'. '+s.dataset.title;b.addEventListener('click',()=>{go(i);closeDrawer()});list.appendChild(b)})}
+  function go(i){current=Math.max(0,Math.min(slides.length-1,i));slides.forEach((s,j)=>s.classList.toggle('active',j===current));count.textContent=`${current+1} / ${slides.length}`;progress.style.width=`${((current+1)/slides.length)*100}%`;document.getElementById('prevBtn').disabled=current===0;document.getElementById('nextBtn').disabled=current===slides.length-1;renderList();window.scrollTo({top:0,behavior:'smooth'})}
+  document.getElementById('prevBtn').addEventListener('click',()=>go(current-1));document.getElementById('nextBtn').addEventListener('click',()=>go(current+1));
+  function openDrawer(){drawer.classList.add('open');overlay.classList.add('show')}function closeDrawer(){drawer.classList.remove('open');overlay.classList.remove('show')}
+  document.getElementById('menuBtn').addEventListener('click',openDrawer);document.getElementById('closeDrawer').addEventListener('click',closeDrawer);overlay.addEventListener('click',closeDrawer);
+  document.getElementById('themeBtn').addEventListener('click',()=>document.body.classList.toggle('dark'));
+  document.getElementById('notesBtn').addEventListener('click',()=>app.classList.toggle('show-notes'));
+  document.getElementById('fsBtn').addEventListener('click',()=>{if(!document.fullscreenElement){document.documentElement.requestFullscreen?.()}else{document.exitFullscreen?.()}});
+  document.addEventListener('keydown',(e)=>{if(['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName))return;if(e.key==='ArrowRight')go(current+1);if(e.key==='ArrowLeft')go(current-1);if(e.key.toLowerCase()==='m')openDrawer();if(e.key.toLowerCase()==='n')app.classList.toggle('show-notes');if(e.key==='Escape')closeDrawer()});
+  document.querySelectorAll('[data-check]').forEach(btn=>btn.addEventListener('click',()=>{const name=btn.dataset.check,ans=btn.dataset.answer;const chosen=document.querySelector(`input[name="${name}"]:checked`);const fb=document.getElementById('fb-'+name);fb.className='feedback show '+(chosen&&chosen.value===ans?'good':'bad');fb.textContent=!chosen?'Selecciona una opción antes de comprobar.':chosen.value===ans?'Correcto. La pregunta exige examinar criterios y justificaciones, no solo registrar un dato descriptivo.':'Revisa: una pregunta filosófica busca fundamentos, significados o criterios de justificación.'}));
+  document.getElementById('revealFive').addEventListener('click',()=>document.getElementById('fiveAnswer').classList.toggle('show'));
+  document.querySelectorAll('.question-card > button').forEach(b=>b.addEventListener('click',()=>b.parentElement.classList.toggle('open')));
+  document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.tab-panel').forEach(x=>x.classList.remove('active'));t.classList.add('active');document.getElementById(t.dataset.tab).classList.add('active')}));
+  const meter=document.getElementById('meterFill'), dilemmaText=document.getElementById('dilemmaText');
+  document.querySelectorAll('.vote').forEach(v=>v.addEventListener('click',()=>{document.querySelectorAll('.vote').forEach(x=>x.classList.remove('selected'));v.classList.add('selected');const eq=v.dataset.vote==='equity';meter.style.width=eq?'72%':'35%';dilemmaText.innerHTML=eq?'<strong>Equidad:</strong> puede justificarse cuando diferencias relevantes exigen apoyos distintos para producir oportunidades más comparables. Aun así, debe explicitar criterios y evitar arbitrariedad.':'<strong>Igualdad uniforme:</strong> protege una regla común y puede evitar favoritismos, pero puede ser insuficiente cuando las condiciones de partida son profundamente desiguales.'}));
+  const dimTexts={biologica:'<strong>Dimensión biológica:</strong> aprender requiere un organismo capaz de cambiar con la experiencia. La plasticidad y el desarrollo posibilitan aprendizajes, pero no eliminan límites ni diferencias individuales.',racional:'<strong>Dimensión racional:</strong> la persona puede comprender, argumentar, revisar creencias y evaluar razones; educar incluye desarrollar esas capacidades.',social:'<strong>Dimensión social:</strong> lenguaje, normas, conocimientos y habilidades se construyen en interacción con otras personas e instituciones.',cultural:'<strong>Dimensión cultural:</strong> el sujeto recibe tradiciones y significados, pero también puede reinterpretarlos y transformarlos críticamente.',etica:'<strong>Dimensión ética:</strong> educarse implica aprender a deliberar, asumir responsabilidades, reconocer al otro y construir criterios para la acción.',historica:'<strong>Dimensión histórica:</strong> toda persona aprende dentro de condiciones concretas de época, economía, familia, tecnología e instituciones; las oportunidades no se distribuyen por igual.'};
+  document.querySelectorAll('.dimension').forEach(d=>d.addEventListener('click',()=>{document.querySelectorAll('.dimension').forEach(x=>x.classList.remove('active'));d.classList.add('active');document.getElementById('dimensionDetails').innerHTML=dimTexts[d.dataset.dim]}));
+  const quiz=document.getElementById('quiz'),qr=document.getElementById('quizResult'),key={q1:'b',q2:'a',q3:'c',q4:'a',q5:'b'};
+  quiz.addEventListener('submit',e=>{e.preventDefault();let score=0,answered=0;Object.entries(key).forEach(([q,a])=>{const x=quiz.querySelector(`input[name="${q}"]:checked`);if(x){answered++;if(x.value===a)score++}});qr.className='feedback show '+(score>=4?'good':'bad');qr.innerHTML=answered<5?`Has respondido ${answered} de 5. Completa todos los reactivos para obtener una valoración integral.`:`Resultado: <strong>${score}/5</strong>. `+(score===5?'Dominio excelente de los conceptos centrales.':score>=4?'Buen dominio; revisa el reactivo incorrecto y su justificación.':score>=3?'Comprensión suficiente, pero conviene repasar problemas filosóficos y educabilidad.':'Revisa los apartados 1.2 a 1.5 y vuelve a intentarlo.')});
+  document.getElementById('resetQuiz').addEventListener('click',()=>{quiz.reset();qr.className='feedback';qr.textContent=''});
+  go(0);
+})();
+</script>
+</body>
+</html>
